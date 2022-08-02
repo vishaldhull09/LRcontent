@@ -661,9 +661,19 @@ function _d3(require){return(
 require("d3-regression", "d3")
 )}
 
+function _hello(md,name){return(
+md`# Hello ${name}`
+)}
+
+function _name(){return(
+'world'
+)}
+
 export default function define(runtime, observer) {
   console.log("jhgf");
   const main = runtime.module();
+  main.variable(observer("hello")).define("hello", ["md","name"], _hello);
+  main.variable(observer("name")).define("name", _name);
   main.variable(observer()).define(["md"], _1);
   main.variable(observer("resetButton")).define("resetButton", ["Inputs","d3","regressionPlot"], _resetButton);
   main.variable(observer("viewOptions")).define("viewOptions", ["Inputs","d3","regressionPlot"], _viewOptions);
