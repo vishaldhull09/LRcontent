@@ -674,18 +674,5 @@ export default function define(runtime, observer) {
   const main = runtime.module();
   main.variable(observer("hello")).define("hello", ["md","name"], _hello);
   main.variable(observer("name")).define("name", _name);
-  main.variable(observer()).define(["md"], _1);
-  main.variable(observer("resetButton")).define("resetButton", ["Inputs","d3","regressionPlot"], _resetButton);
-  main.variable(observer("viewOptions")).define("viewOptions", ["Inputs","d3","regressionPlot"], _viewOptions);
-  main.variable(observer("rSquaredPlot")).define("rSquaredPlot", ["RSquaredPlot","width"], _rSquaredPlot);
-  main.variable(observer("regressionPlot")).define("regressionPlot", ["RegressionPlot","data","width","d3","rSquaredPlot"], _regressionPlot);
-  main.variable(observer()).define(["tex","md"], _6);
-  main.variable(observer()).define(["md"], _7);
-  main.variable(observer("width")).define("width", _width);
-  main.variable(observer("data")).define("data", ["d3"], _data);
-  main.variable(observer("animation")).define("animation", ["d3","data","regressionPlot"], _animation);
-  main.variable(observer("RSquaredPlot")).define("RSquaredPlot", ["d3"], _RSquaredPlot);
-  main.variable(observer("RegressionPlot")).define("RegressionPlot", ["d3"], _RegressionPlot);
-  main.variable(observer("d3")).define("d3", ["require"], _d3);
   return main;
 }
