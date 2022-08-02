@@ -662,6 +662,7 @@ require("d3-regression", "d3")
 )}
 
 export default function define(runtime, observer) {
+  console.log("jhgf");
   const main = runtime.module();
   main.variable(observer()).define(["md"], _1);
   main.variable(observer("resetButton")).define("resetButton", ["Inputs","d3","regressionPlot"], _resetButton);
